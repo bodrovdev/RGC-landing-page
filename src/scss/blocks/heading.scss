@@ -1,0 +1,41 @@
+@use "../mixins";
+
+.heading {
+  background: url('../img/image/header-cover.png') var(--color-william);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 710px;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    min-height: 710px;
+
+    padding: 80px 0 0 0
+  }
+
+  &__info-title {
+    font-family: var(--font-family-title);
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 85px;
+    color: var(--color-white);
+    text-align: center;
+
+    margin: 0 0 3px 0 0;
+  }
+
+  &__info-subtitle {
+    font-family: var(--font-family-title);
+    font-weight: 700;
+    font-size: 39px;
+    line-height: 48px;
+    color: var(--color-white);
+    text-align: center;
+
+    margin: 0 0 3px 0 0;
+  }
+}
