@@ -1,0 +1,38 @@
+@use "../mixins";
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	-webkit-tap-highlight-color: transparent;
+	scrollbar-gutter: stable;
+}
+
+*,
+:after,
+:before {
+	box-sizing: inherit;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+
+	width: 100%;
+	min-height: 100vh;
+
+	font-family: var(--font-family-default);
+
+	margin: 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+	-moz-appearance: textfield;
+}
