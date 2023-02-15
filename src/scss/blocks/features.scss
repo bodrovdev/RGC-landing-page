@@ -1,0 +1,119 @@
+@use "../mixins";
+
+.features {
+  background-color: var(--color-wild-sand);
+
+  padding: 100px 0 101px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    max-width: 515px;
+
+    margin: 0 0 25px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__image {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  &__img {
+    display: block;
+
+    vertical-align: top;
+  }
+
+  &__column-text {
+    margin: 0 0 41px 0;
+  }
+
+  &__column-text p {
+    font-family: var(--font-family-title);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: var(--color-mine-shaft);
+
+    padding: 0;
+    margin: 0 0 28px 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__logo-image {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+
+    margin: 0 0 42px 0;
+  }
+
+  &__logo-img {
+    display: block;
+
+    vertical-align: top;
+  }
+
+  &__column--left {
+    margin: 0 85px 0 0
+  }
+
+  &__column-stats {
+    display: flex;
+  }
+
+  &__stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__stats-item:first-child {
+    position: relative;
+
+    padding: 0 32px 0 0;
+    margin: 0 32px 0 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      width: 4px;
+      height: 140px;
+      background-color: var(--color-mine-shaft);
+    }
+  }
+
+  &__stats-num {
+    font-family: var(--font-family-special);
+    font-weight: 500;
+    font-size: 100px;
+    line-height: 110px;
+    color: var(--color-pancho);
+  }
+
+  &__stats-desc {
+    display: inline-block;
+
+    max-width: 209px;
+
+    font-family: var(--font-family-title);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    color: var(--color-mine-shaft);
+  }
+}

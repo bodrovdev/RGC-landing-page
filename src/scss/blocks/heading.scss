@@ -2,6 +2,7 @@
 
 .heading {
   background: url('../img/image/header-cover.png') var(--color-william);
+  background: var(--color-william);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -43,6 +44,8 @@
 
   &__info-features {
     display: flex;
+
+    margin: 0 0 35px 0;
   }
 
   &__features-item {
@@ -82,55 +85,115 @@
     z-index: 2;
   }
 
-  @keyframes wispAnim {
+  // @keyframes wispAnim {
+  //   0% {
+  //     transform: rotate(0);
+  //   }
+
+  //   100% {
+  //     transform: rotate(360deg);
+  //   }
+  // }
+
+  @keyframes wispAnimTwo {
     0% {
-      transform: rotate(0);
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(2);
     }
 
     100% {
-      transform: rotate(360deg);
+      transform: scale(1);
     }
   }
 
   &__features-wisp {
-    position: relative;
+    // position: relative;
 
-    width: 20px;
-    min-width: 20px;
-    height: 20px;
-    min-height: 20px;
+    // width: 20px;
+    // min-width: 20px;
+    // height: 20px;
+    // min-height: 20px;
+    // border-radius: 50%;
+
+    // animation-name: wispAnim;
+    // animation-duration: 1.5s;
+    // animation-timing-function: linear;
+    // animation-iteration-count: infinite;
+
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
+    background: linear-gradient(90deg, #EDD49D -25.11%, #E7D39E 175.32%);
+    box-shadow: 0px 0px 16.6419px #F19C41, 0px 0px 9.50966px #F19C41, 0px 0px 5.5473px #F19C41, 0px 0px 2.77365px #F19C41, 0px 0px 0.792471px #F19C41, 0px 0px 0.396236px #F19C41;
 
-    animation-name: wispAnim;
-    animation-duration: 1.5s;
+    animation-name: wispAnimTwo;
+    animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 
-    margin: 0 49px 0 0;
+    margin: 0 69px 0 0;
 
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
+    // &::after {
+    //   content: "";
+    //   position: absolute;
+    //   right: 0;
 
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: linear-gradient(90deg, #EDD49D -25.11%, #E7D39E 175.32%);
-      box-shadow: 0px 0px 16.6419px #F19C41, 0px 0px 9.50966px #F19C41, 0px 0px 5.5473px #F19C41, 0px 0px 2.77365px #F19C41, 0px 0px 0.792471px #F19C41, 0px 0px 0.396236px #F19C41;
-    }
+    //   width: 5px;
+    //   height: 5px;
+    //   border-radius: 50%;
+    //   background: linear-gradient(90deg, #EDD49D -25.11%, #E7D39E 175.32%);
+    //   box-shadow: 0px 0px 16.6419px #F19C41, 0px 0px 9.50966px #F19C41, 0px 0px 5.5473px #F19C41, 0px 0px 2.77365px #F19C41, 0px 0px 0.792471px #F19C41, 0px 0px 0.396236px #F19C41;
+    // }
   }
 
   &__features-item:last-child {
     & .heading__features-wisp {
-      animation-name: wispAnim;
-      animation-duration: 2s;
+      animation-name: wispAnimTwo;
+      animation-duration: 5s;
+      animation-delay: 2.5s;
       animation-timing-function: linear;
       animation-iteration-count: infinite;
 
-      margin: 0 25px 0 0;
+      margin: 0 45px 0 0;
     }
   }
 
+  &__info-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 307px;
+    height: 85px;
+    background: linear-gradient(90deg, #EDD49D -25.11%, #E7D39E 175.32%);
+    box-shadow: 0px 0px 100px rgba(207, 186, 130, 0.25), 0px 0px 247.565px rgba(207, 186, 130, 0.25), 0px 0px 144.413px rgba(207, 186, 130, 0.25), 0px 0px 72.2064px rgba(207, 186, 130, 0.25), 0px 0px 20px rgba(216, 127, 127, 0.25), 0px 0px 10px rgba(216, 127, 127, 0.25);
+    border-radius: 9px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    color: var(--color-black);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -4px;
+
+      width: 285px;
+      height: 4px;
+      background: linear-gradient(90deg, #EDD49D -25.11%, #E7D39E 175.32%);
+      border-radius: 0px 0px 20px 20px;
+
+      transform: translateX(-50%);
+    }
+  }
 
 }
