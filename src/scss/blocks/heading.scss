@@ -25,17 +25,112 @@
     color: var(--color-white);
     text-align: center;
 
-    margin: 0 0 3px 0 0;
+    margin: 0 0 3px 0;
   }
 
   &__info-subtitle {
+    display: inline-block;
+
     font-family: var(--font-family-title);
     font-weight: 700;
     font-size: 39px;
     line-height: 48px;
+    color: var(--color-pancho);
+    text-align: center;
+
+    margin: 0 0 23px 0;
+  }
+
+  &__info-features {
+    display: flex;
+  }
+
+  &__features-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 263px;
+    height: 55px;
+
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(1.76105px);
+    border: 1px solid var(--color-silver-chalice);
+    border-radius: 9px;
+
+    padding: 16px 39px;
+    margin: 0 23px 0 0;
+
+    z-index: 1;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__features-text {
+    position: relative;
+
+    opacity: 1 !important;
+
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 21px;
     color: var(--color-white);
     text-align: center;
 
-    margin: 0 0 3px 0 0;
+    z-index: 2;
   }
+
+  @keyframes wispAnim {
+    0% {
+      transform: rotate(0);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  &__features-wisp {
+    position: relative;
+
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    border-radius: 50%;
+
+    animation-name: wispAnim;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    margin: 0 49px 0 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: linear-gradient(90deg, #EDD49D -25.11%, #E7D39E 175.32%);
+      box-shadow: 0px 0px 16.6419px #F19C41, 0px 0px 9.50966px #F19C41, 0px 0px 5.5473px #F19C41, 0px 0px 2.77365px #F19C41, 0px 0px 0.792471px #F19C41, 0px 0px 0.396236px #F19C41;
+    }
+  }
+
+  &__features-item:last-child {
+    & .heading__features-wisp {
+      animation-name: wispAnim;
+      animation-duration: 2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+
+      margin: 0 25px 0 0;
+    }
+  }
+
+
 }
