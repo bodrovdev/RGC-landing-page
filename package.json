@@ -37,7 +37,8 @@
     "postcss-preset-env": "^7.2.3",
     "require-dir": "^1.2.0",
     "sass": "^1.45.0",
-    "webpack-stream": "^7.0.0"
+    "webpack-stream": "^7.0.0",
+    "when-in-viewport": "^2.0.4"
   },
   "dependencies": {
     "glightbox": "^3.2.0",

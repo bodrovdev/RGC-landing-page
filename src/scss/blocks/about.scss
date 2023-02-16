@@ -1,0 +1,138 @@
+@use "../mixins";
+
+.about {
+  &__container {
+    display: flex;
+    align-items: stretch;
+  }
+
+  &__image {
+    margin: 0 17px 0 0;
+  }
+
+  &__img {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: -7px;
+      bottom: -7px;
+
+      width: 416px;
+      height: 547px;
+      background: var(--gradient-main);
+      border-radius: 6px;
+
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    max-width: 449px;
+
+    margin: 0 0 42px 0;
+
+    &--mobileOnly {
+      display: none;
+
+      @include mixins.respond-to(mobileOnly) {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__column {
+    width: 100%;
+  }
+
+  &__text {
+    margin: 0 0 41px 0;
+
+    & p {
+      display: inline-block;
+
+      max-width: 785px;
+
+      font-family: var(--font-family-title);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 27px;
+      color: var(--color-mine-shaft);
+
+      margin: 0 0 28px 0;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__features {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+    &:hover {
+      & .about__features-item:nth-child(1) {
+        transform: rotateY(-180deg);
+        transition: transform 2s;
+
+        & .about__features-info {
+          transform: rotateY(-180deg);
+          transition: transform 2s;
+        }
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 196px;
+      height: 212px;
+      background: var(--gradient-main);
+      border-radius: 6px;
+
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      transition: transform 2s;
+
+      padding: 29px 25px;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      transform: translateZ(60px);
+      backface-visibility: hidden;
+    }
+
+    &-num {
+      font-family: var(--font-family-title);
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 88px;
+
+      backface-visibility: hidden;
+    }
+
+    &-desc {
+      font-family: var(--font-family-title);
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 22px;
+      text-align: center;
+
+      backface-visibility: hidden;
+    }
+  }
+}

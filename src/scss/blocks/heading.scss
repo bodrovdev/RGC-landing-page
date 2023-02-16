@@ -2,7 +2,7 @@
 
 .heading {
   background: url('../img/image/header-cover.png') var(--color-william);
-  background: var(--color-william);
+  // background: var(--color-william);
   background-size: cover;
   background-repeat: no-repeat;
 
@@ -181,19 +181,19 @@
 
     color: var(--color-black);
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      bottom: -4px;
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   left: 50%;
+    //   bottom: -4px;
 
-      width: 285px;
-      height: 4px;
-      background: linear-gradient(90deg, #EDD49D -25.11%, #E7D39E 175.32%);
-      border-radius: 0px 0px 20px 20px;
+    //   width: 285px;
+    //   height: 4px;
+    //   background: linear-gradient(90deg, #EDD49D -25.11%, #E7D39E 175.32%);
+    //   border-radius: 0px 0px 20px 20px;
 
-      transform: translateX(-50%);
-    }
+    //   transform: translateX(-50%);
+    // }
   }
 
 }
