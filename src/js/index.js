@@ -47,4 +47,4 @@ window.addEventListener('load', () => {
   whenInViewport(document.querySelector('.help__wrapper-item'), () => {
     Array.from(allChecks).map((item, index) => timeOutFunction(item, index));
   });
-})  
+})
