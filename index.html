@@ -257,6 +257,62 @@
       </div>
     </div>
   </section>
+
+  <section class="feedback">
+    <div class="feedback__container base-container">
+      <div class="feedback__wrapper">
+        <div class="feedback__column feedback__column--left">
+          <form class="feedback__form">
+            <label class="feedback__label" for="form_name">
+              <span class="feedback__label-text">Как к вам обращаться?</span>
+              <input class="feedback__input" type="text" name="form_name" id="form_name">
+            </label>
+            <label class="feedback__label feedback__label--phone" for="form_phone">
+              <span class="feedback__label-text">Ваш контактный номер телефона</span>
+            </label>
+
+            <div class="feedback__input-block">
+              <div class="feedback__select">
+                <svg class="feedback__select-flag" width="30" height="20">
+                  <use href="img/icon/sprite.svg#rus-icon"></use>
+                </svg>
+                <svg class="feedback__select-arrow" width="6" height="6">
+                  <use href="img/icon/sprite.svg#check-arrow-icon"></use>
+                </svg>
+                <ul class="feedback__select-list base-list">
+                  <li class="feedback__select-item">
+
+                  </li>
+                  <li class="feedback__select-item">eng</li>
+                </ul>
+              </div>
+              <input class="feedback__input feedback__input--mobile" type="text" name="form_phone" id="form_phone">
+            </div>
+
+            <script>
+              document.querySelector('.feedback__select').addEventListener('click', () => {
+                console.log('test');
+              })
+            </script>
+
+            <label class="feedback__label">
+              <span class="feedback__label-text">Опишите вашу ситуацию</span>
+              <textarea name="form_text" id="form_text"></textarea>
+            </label>
+            <button class="feedback__submit base-button" type="submit">Отправить</button>
+            <span class="feedback__terms">Нажимая кнопку вы даете <a class="feedback__terms-link base-link" href="#">согласие на обработку</a> персональных данных</span>
+          </form>
+        </div>
+        <div class="feedback__column feedback__column--right">
+          <div class="feedback__info">
+            <span class="feedback__info-text feedback__info-text--big">Отправьте заявку прямо сейчас!</span>
+            <span class="feedback__info-text feedback__info-text--small">И уже сегодня мы решим Ваш вопрос</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="page-footer">
