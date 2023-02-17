@@ -48,3 +48,5 @@ window.addEventListener('load', () => {
     Array.from(allChecks).map((item, index) => timeOutFunction(item, index));
   });
 })
+
+//Выпадающее меню с выбором категории на странице feedback

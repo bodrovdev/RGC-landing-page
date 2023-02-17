@@ -4,7 +4,9 @@
   background: url('../img/image/header-cover.png') var(--color-william);
   // background: var(--color-william);
   background-size: cover;
+  // background-size: 1920px 713px;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 
   min-height: 710px;
 
