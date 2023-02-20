@@ -1,7 +1,6 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import whenInViewport from 'when-in-viewport';
 
-
 // --- Мобильное меню
 let burger = document.getElementById('burger');
 let mobile_menu = document.getElementById('mobile_menu');
@@ -14,9 +13,11 @@ burger.addEventListener('click', () => {
 
   if (burger.classList.contains('main-nav__burger--active')) {
     disableBodyScroll(mobile_menu);
+    console.log('opa');
   }
   else {
     enableBodyScroll(mobile_menu);
+    console.log('ne ponel');
   }
 })
 
@@ -50,3 +51,27 @@ window.addEventListener('load', () => {
 })
 
 //Выпадающее меню с выбором категории на странице feedback
+
+//Плавный скроллинг до якорных ссылок
+$('a[href^="#"]').on('click', function (e) {
+  e.preventDefault();
+
+  var id = $(this).attr('href'),
+    top = $(id).offset().top;
+
+  $('body,html').animate({
+    scrollTop: top
+  }, 2000);
+});
+
+let b1 = document.querySelector('#test1');
+let b2 = document.querySelector('#test2');
+
+b1.addEventListener('click', () => {
+  disableBodyScroll(b1);
+  console.log('opa');
+})
+b2.addEventListener('click', () => {
+  enableBodyScroll(b1);
+  console.log('nihuya');
+})

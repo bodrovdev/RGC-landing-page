@@ -1,14 +1,19 @@
 @use "../mixins";
 
 .heading {
+  min-height: 710px;
   background: url('../img/image/header-cover.png') var(--color-william);
   // background: var(--color-william);
-  background-size: cover;
   // background-size: 1920px 713px;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  min-height: 710px;
+  @include mixins.respond-to(mobileOnly) {
+    min-height: 679px;
+    background: url('../img/image/header-cover-mobile.png') var(--color-william);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 
   &__container {
     display: flex;
@@ -29,6 +34,11 @@
     text-align: center;
 
     margin: 0 0 3px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 20px;
+      line-height: 25px;
+    }
   }
 
   &__info-subtitle {
@@ -42,12 +52,21 @@
     text-align: center;
 
     margin: 0 0 23px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 16px;
+      line-height: 21px;
+    }
   }
 
   &__info-features {
     display: flex;
 
     margin: 0 0 35px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+    }
   }
 
   &__features-item {

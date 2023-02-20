@@ -1,0 +1,69 @@
+@use "../mixins";
+
+.footer-main {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 35px 0 35px 0;
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-image {
+      margin: 0 0 7px 0
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-item {
+    margin: 0 30px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__nav-link {
+    font-family: var(--font-family-title);
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    color: var(--color-mine-shaft);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    &-isart {
+
+      font-family: var(--font-family-title);
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 21px;
+      color: var(--color-mid-gray);
+
+      margin: 0 0 12px 0;
+    }
+
+    &-policy {
+      font-family: var(--font-family-title);
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 21px;
+      color: var(--color-william);
+    }
+  }
+}
