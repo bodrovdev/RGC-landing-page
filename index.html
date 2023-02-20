@@ -28,16 +28,16 @@
 
             <ul class="main-nav__nav-list base-list">
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="about.html">Почему мы</a>
+                <a class="main-nav__nav-link base-link" href="#test">Почему мы</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="soviet.html">Услуги</a>
+                <a class="main-nav__nav-link base-link" href="#">Услуги</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="archive.html">О нас</a>
+                <a class="main-nav__nav-link base-link" href="#">О нас</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="accounting.html">Консультация</a>
+                <a class="main-nav__nav-link base-link" href="#">Консультация</a>
               </li>
             </ul>
 
@@ -62,11 +62,11 @@
         <h1 class="heading__info-title base-title">Услуги консалтинга</h1>
         <span class="heading__info-subtitle">В АРАБСКИХ ЭМИРАТАХ</span>
         <div class="heading__info-features">
-          <div class="heading__features-item">
+          <div class="heading__features-item" id="test1">
             <span class="heading__features-wisp"></span>
             <span class="heading__features-text">Быстро</span>
           </div>
-          <div class="heading__features-item">
+          <div class="heading__features-item" id="test2">
             <span class="heading__features-wisp"></span>
             <span class="heading__features-text">Качественно</span>
           </div>
@@ -206,9 +206,7 @@
           </div>
         </div>
 
-        <div class="flip-card text-center">
-          <a class="help__wrapper-link base-link" href="#">Получить предложение</a>
-        </div>
+        <a class="help__wrapper-link base-link" href="#">Получить предложение</a>
 
       </div>
     </div>
@@ -258,7 +256,7 @@
     </div>
   </section>
 
-  <section class="feedback">
+  <section class="feedback" id="test">
     <div class="feedback__container base-container">
       <div class="feedback__wrapper">
         <div class="feedback__column feedback__column--left">
@@ -297,7 +295,7 @@
 
             <label class="feedback__label">
               <span class="feedback__label-text">Опишите вашу ситуацию</span>
-              <textarea name="form_text" id="form_text"></textarea>
+              <textarea class="feedback__textarea" name="form_text" id="form_text"></textarea>
             </label>
             <button class="feedback__submit base-button" type="submit">Отправить</button>
             <span class="feedback__terms">Нажимая кнопку вы даете <a class="feedback__terms-link base-link" href="#">согласие на обработку</a> персональных данных</span>
@@ -313,23 +311,72 @@
     </div>
   </section>
 
+  <section class="map" style="background: url('img/image/fake-map.png') no-repeat; background-size: cover;">
+    <div class="map__info">
+      <div class="map__info-top">
+        <a class="map__info-phone base-link" href="tel:#">7 (000) 000-00-00 (Москва)</a>
+        <a class="map__info-phone base-link" href="tel:#">+000-0-000-0000 (ОАЭ)</a>
+      </div>
+      <div class="map__info-bottom">
+        <div class="map__bottom-left">
+          А тут тоже будет продолжение адреса<br>
+          Тут должен быть адрес офиса
+        </div>
+        <div class="map__bottom-right">
+          <div class="map__bottom-links">
+            <a class="map__bottom-link base-link" href="#">
+              <img class="map__bottom-icon" src="img/image/social-1.png" width="31" height="31" alt="#">
+            </a>
+            <a class="map__bottom-link base-link" href="#">
+              <img class="map__bottom-icon" src="img/image/social-2.png" width="39" height="39" alt="#">
+            </a>
+          </div>
+          <a class="map__bottom-email base-link" href="mailto:#">babkahagivagi@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </main>
 
 <footer class="page-footer">
 
-  <section class="footer-underline">
-    <div class="footer-underline__container base-container">
-      <span class="footer-underline__copyright"></span>
-      <a class="footer-underline__policy base-link" href="index.html">Политика конфиденциальности</a>
-      <a class="footer-underline__isart-link base-link" targe="_blank" rel="noreferrer" href="https://is-art.ru/">
-        <span class="footer-underline__isart-text">Разработано</span>
-        <svg class="footer-underline__logo-icon" width="52" height="22" alt="#">
-          <use href="img/icon/sprite.svg#isart-logo-icon"></use>
-        </svg>
+  <section class="footer-main">
+    <div class="footer-main__container base-container">
+      <a class="footer-main__logo base-link" href="index.html">
+        <figure class=footer-main__logo-image base-figure">
+          <img class=footer-main__logo-img" src="img/image/logo-footer.svg" width="120" height="50" alt="Логотип">
+        </figure>
+        <span class="footer-main__logo-year">© 2022</span>
       </a>
+      <ul class="footer-main__nav-list base-list">
+        <li class="footer-main__nav-item">
+          <a class="footer-main__nav-link base-link" href="#">Почему мы</a>
+        </li>
+        <li class="footer-main__nav-item">
+          <a class="footer-main__nav-link base-link" href="#">Услуги</a>
+        </li>
+        <li class="footer-main__nav-item">
+          <a class="footer-main__nav-link base-link" href="#">О нас</a>
+        </li>
+        <li class="footer-main__nav-item">
+          <a class="footer-main__nav-link base-link" href="#">Консультация</a>
+        </li>
+      </ul>
+      <div class="footer-main__info">
+        <a class="footer-main__info-isart base-link" targe="_blank" rel="noreferrer" href="https://is-art.ru/">
+          <span class="footer-main__isart-text">Разработано</span>
+          <svg class="footer-main__isart-icon" width="52" height="22" alt="#">
+            <use href="img/icon/sprite.svg#isart-logo-icon"></use>
+          </svg>
+        </a>
+        <a class="footer-main__info-policy base-link" href="#">Политика конфиденциальности</a>
+      </div>
     </div>
   </section>
 </footer>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="js/index.min.js?v=1.0"></script>
 </body>
 
