@@ -7,6 +7,10 @@
     padding: 60px 0 60px 0;
   }
 
+  @include mixins.respond-to(tabletOnly) {
+    padding: 60px 0 60px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -29,6 +33,11 @@
       padding: 33px 21px;
       margin: 0 0 20px 0;
     }
+
+    @include mixins.respond-to(tabletOnly) {
+      padding: 33px 21px;
+      margin: 0 0 20px 0;
+    }
   }
 
   &__wrapper-main {
@@ -40,6 +49,12 @@
     margin: 0 0 52px 0;
 
     @include mixins.respond-to(mobileOnly) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
       display: flex;
       flex-direction: column;
       align-items: flex-start;

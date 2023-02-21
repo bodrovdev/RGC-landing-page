@@ -85,7 +85,13 @@
   &__img {
     display: block;
 
+    object-fit: cover;
     vertical-align: top;
+
+    @include mixins.respond-to(desktopSOnly) {
+      width: 255px;
+      height: 267px;
+    }
   }
 
   &__column-text {
