@@ -48,6 +48,11 @@ window.addEventListener('load', () => {
   });
 })
 
+// --- 
+whenInViewport(document.querySelector('.features__stats-num'), () => {
+  VanillaCounter();
+});
+
 //Выпадающее меню с выбором категории на странице feedback
 
 //Плавный скроллинг до якорных ссылок

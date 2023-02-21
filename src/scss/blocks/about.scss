@@ -42,8 +42,8 @@
       right: -7px;
       bottom: -7px;
 
-      width: 416px;
-      height: 547px;
+      width: 100%;
+      height: 100%;
       background: var(--gradient-main);
       border-radius: 6px;
 
@@ -68,6 +68,10 @@
 
     @include mixins.respond-to(tabletOnly) {
       width: 100%;
+    }
+
+    @media only screen and (min-device-width: 1280px) and (max-device-width: 1365px) {
+      width: 290px;
     }
   }
 
