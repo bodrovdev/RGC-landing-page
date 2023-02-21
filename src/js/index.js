@@ -13,11 +13,9 @@ burger.addEventListener('click', () => {
 
   if (burger.classList.contains('main-nav__burger--active')) {
     disableBodyScroll(mobile_menu);
-    console.log('opa');
   }
   else {
     enableBodyScroll(mobile_menu);
-    console.log('ne ponel');
   }
 })
 
@@ -42,7 +40,7 @@ window.addEventListener('load', () => {
   function timeOutFunction(value, time) {
     setTimeout(() => {
       value.classList.add('check-icon');
-    }, time * 1000)
+    }, time * 500)
   }
 
   whenInViewport(document.querySelector('.help__wrapper-item'), () => {
@@ -61,17 +59,5 @@ $('a[href^="#"]').on('click', function (e) {
 
   $('body,html').animate({
     scrollTop: top
-  }, 2000);
+  }, 0);
 });
-
-let b1 = document.querySelector('#test1');
-let b2 = document.querySelector('#test2');
-
-b1.addEventListener('click', () => {
-  disableBodyScroll(b1);
-  console.log('opa');
-})
-b2.addEventListener('click', () => {
-  enableBodyScroll(b1);
-  console.log('nihuya');
-})

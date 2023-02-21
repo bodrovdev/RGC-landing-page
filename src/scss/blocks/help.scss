@@ -3,6 +3,10 @@
 .help {
   padding: 100px 0 117px 0;
 
+  @include mixins.respond-to(mobileOnly) {
+    padding: 60px 0 60px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -20,6 +24,11 @@
     border-radius: 6px;
 
     padding: 50px 30px 40px 50px;
+
+    @include mixins.respond-to(mobileOnly) {
+      padding: 33px 21px;
+      margin: 0 0 20px 0;
+    }
   }
 
   &__wrapper-main {
@@ -28,7 +37,13 @@
     grid-row-gap: 39px;
     grid-column-gap: 62px;
 
-    margin: 0 0 52px 0
+    margin: 0 0 52px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__wrapper-item {
@@ -48,6 +63,13 @@
 
     padding: 3px 7px 2px 3px;
     margin: 0 18px 0 0;
+  }
+
+  &__item-text {
+    font-family: var(--font-family-title);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
   }
 
   &__graphic-field {
@@ -87,6 +109,29 @@
     text-align: center;
 
     color: var(--color-black);
+
+    @include mixins.respond-to(mobileOnly) {
+      display: none;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      width: 100%;
+      height: 89px;
+
+      @include mixins.respond-to(mobileOnly) {
+        display: flex;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        display: flex;
+      }
+    }
   }
 }
 

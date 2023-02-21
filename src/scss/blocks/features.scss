@@ -5,6 +5,14 @@
 
   padding: 100px 0 101px 0;
 
+  @include mixins.respond-to(mobileOnly) {
+    padding: 60px 0 60px 0;
+  }
+
+  @include mixins.respond-to(tabletOnly) {
+    padding: 60px 0 60px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -14,16 +22,64 @@
     max-width: 515px;
 
     margin: 0 0 25px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 30px 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin: 0 0 30px 0;
+    }
   }
 
   &__wrapper {
     display: flex;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      flex-direction: column;
+    }
   }
 
   &__image {
     display: block;
     width: fit-content;
     height: fit-content;
+
+    @include mixins.respond-to(mobileOnly) {
+      display: none;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      display: none;
+    }
+
+    &--mobile {
+      display: none;
+
+      @include mixins.respond-to(mobileOnly) {
+        display: block;
+
+        margin: 0 0 20px 0;
+      }
+
+      @media only screen and (min-device-width: 320px) and (max-device-width: 399px) {
+        & img {
+          width: 100%;
+          min-width: 100%;
+          height: 280px;
+        }
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        display: block;
+
+        margin: 0 0 20px 0;
+      }
+    }
   }
 
   &__img {
@@ -34,6 +90,14 @@
 
   &__column-text {
     margin: 0 0 41px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 20px 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin: 0 0 20px 0;
+    }
   }
 
   &__column-text p {
@@ -57,6 +121,14 @@
     height: fit-content;
 
     margin: 0 0 42px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      display: none;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      display: none;
+    }
   }
 
   &__logo-img {
@@ -66,17 +138,30 @@
   }
 
   &__column--left {
-    margin: 0 85px 0 0
+    margin: 0 85px 0 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      margin: 0;
+    }
   }
 
   &__column-stats {
     display: flex;
+    align-items: stretch;
   }
 
   &__stats-item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
+
+    width: fit-content;
+    height: fit-content;
   }
 
   &__stats-item:first-child {
@@ -84,6 +169,16 @@
 
     padding: 0 32px 0 0;
     margin: 0 32px 0 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      padding: 0 22px 0 0;
+      margin: 0 22px 0 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      padding: 0 22px 0 0;
+      margin: 0 22px 0 0;
+    }
 
     &::after {
       content: "";
@@ -94,6 +189,16 @@
       width: 4px;
       height: 140px;
       background-color: var(--color-mine-shaft);
+
+      @include mixins.respond-to(mobileOnly) {
+        width: 2px;
+        height: 97px;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        width: 2px;
+        height: 97px;
+      }
     }
   }
 
@@ -103,6 +208,20 @@
     font-size: 100px;
     line-height: 110px;
     color: var(--color-pancho);
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 60px;
+      line-height: 101px;
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+      font-size: 50px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      font-size: 70px;
+      line-height: 101px;
+    }
   }
 
   &__stats-desc {
@@ -115,5 +234,23 @@
     font-size: 16px;
     line-height: 27px;
     color: var(--color-mine-shaft);
+
+    @include mixins.respond-to(mobileOnly) {
+      max-width: 145px;
+
+      font-size: 11px;
+      line-height: 19px;
+    }
+
+    @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+      font-size: 9px;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      max-width: 220px;
+
+      font-size: 16px;
+      line-height: 19px;
+    }
   }
 }

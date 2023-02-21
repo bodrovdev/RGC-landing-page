@@ -7,11 +7,11 @@
         <h1 class="heading__info-title base-title">Услуги консалтинга</h1>
         <span class="heading__info-subtitle">В АРАБСКИХ ЭМИРАТАХ</span>
         <div class="heading__info-features">
-          <div class="heading__features-item" id="test1">
+          <div class="heading__features-item">
             <span class="heading__features-wisp"></span>
             <span class="heading__features-text">Быстро</span>
           </div>
-          <div class="heading__features-item" id="test2">
+          <div class="heading__features-item">
             <span class="heading__features-wisp"></span>
             <span class="heading__features-text">Качественно</span>
           </div>
@@ -28,6 +28,9 @@
         <div class="features__column features__column--left">
           <figure class="features__image base-figure">
             <img class="features__img" src="img/image/features-img.png" width="526" height="551" alt="#">
+          </figure>
+          <figure class="features__image features__image--mobile base-figure">
+            <img class="features__img" src="img/image/features-img-mobile.png" width="352" height="280" alt="#">
           </figure>
         </div>
         <div class="features__column features__column--right">
@@ -154,6 +157,7 @@
         <a class="help__wrapper-link base-link" href="#">Получить предложение</a>
 
       </div>
+      <a class="help__wrapper-link help__wrapper-link--mobile base-link" href="#">Получить предложение</a>
     </div>
   </section>
 
@@ -205,6 +209,12 @@
     <div class="feedback__container base-container">
       <div class="feedback__wrapper">
         <div class="feedback__column feedback__column--left">
+
+          <div class="feedback__info feedback__info--mobile">
+            <span class="feedback__info-text feedback__info-text--big">Отправьте заявку прямо сейчас!</span>
+            <span class="feedback__info-text feedback__info-text--small">И уже сегодня мы решим Ваш вопрос</span>
+          </div>
+
           <form class="feedback__form">
             <label class="feedback__label" for="form_name">
               <span class="feedback__label-text">Как к вам обращаться?</span>
@@ -232,16 +242,11 @@
               <input class="feedback__input feedback__input--mobile" type="text" name="form_phone" id="form_phone">
             </div>
 
-            <script>
-              document.querySelector('.feedback__select').addEventListener('click', () => {
-                console.log('test');
-              })
-            </script>
-
             <label class="feedback__label">
               <span class="feedback__label-text">Опишите вашу ситуацию</span>
               <textarea class="feedback__textarea" name="form_text" id="form_text"></textarea>
             </label>
+
             <button class="feedback__submit base-button" type="submit">Отправить</button>
             <span class="feedback__terms">Нажимая кнопку вы даете <a class="feedback__terms-link base-link" href="#">согласие на обработку</a> персональных данных</span>
           </form>
@@ -256,12 +261,14 @@
     </div>
   </section>
 
-  <section class="map" style="background: url('img/image/fake-map.png') no-repeat; background-size: cover;">
+  <section class="map">
+
     <div class="map__info">
       <div class="map__info-top">
         <a class="map__info-phone base-link" href="tel:#">7 (000) 000-00-00 (Москва)</a>
         <a class="map__info-phone base-link" href="tel:#">+000-0-000-0000 (ОАЭ)</a>
       </div>
+
       <div class="map__info-bottom">
         <div class="map__bottom-left">
           А тут тоже будет продолжение адреса<br>
@@ -280,6 +287,7 @@
         </div>
       </div>
     </div>
+    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A83e3ddc3eb72d51efcb3c7e4d8b8c180bbe7dc0f978a3cae4c52d18cb1c27b7f&amp;source=constructor" frameborder="0"></iframe>
   </section>
 
 </main>

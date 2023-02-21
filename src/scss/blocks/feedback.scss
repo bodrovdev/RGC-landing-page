@@ -4,6 +4,12 @@
 
   margin: 112px 0 146px 0;
 
+  @include mixins.respond-to(mobileOnly) {
+    background: var(--color-wild-sand);
+
+    margin: 60px 0 60px 0;
+  }
+
   &__wrapper {
     display: flex;
     align-items: stretch;
@@ -12,6 +18,10 @@
     background: var(--color-wild-sand);
     box-shadow: 0px 7px 22px rgba(57, 57, 57, 0.25);
     border-radius: 10px;
+
+    @include mixins.respond-to(mobileOnly) {
+      box-shadow: none;
+    }
   }
 
   &__column {
@@ -20,6 +30,10 @@
 
     &--left {
       padding: 70px 47px;
+
+      @include mixins.respond-to(mobileOnly) {
+        padding: 60px 0 60px 0;
+      }
 
       & .feedback__form {
         display: flex;
@@ -36,6 +50,10 @@
       background: url(../img/image/feedback-cover.png);
       background-size: cover;
       background-repeat: no-repeat;
+
+      @include mixins.respond-to(mobileOnly) {
+        display: none;
+      }
 
       &::after {
         content: "";
@@ -97,6 +115,14 @@
 
     margin: 0 0 30px 0;
 
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 16px 0;
+
+      &:last-of-type {
+        margin: 0 0 30px 0;
+      }
+    }
+
     &:last-child {
       margin: 0;
     }
@@ -146,6 +172,10 @@
     display: flex;
 
     margin: 0 0 30px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 16px 0;
+    }
   }
 
   &__select {
@@ -198,6 +228,10 @@
 
     padding: 16px 16px 16px 10px;
 
+    @include mixins.respond-to(mobileOnly) {
+      height: 187px;
+    }
+
     &:focus-visible {
       outline: var(--color-pancho) solid 3px;
     }
@@ -222,6 +256,10 @@
     color: var(--color-black);
 
     margin: 0 0 10px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      margin: 0 0 30px 0;
+    }
   }
 
   &__terms {
@@ -232,7 +270,7 @@
     color: var(--color-black);
 
     &-link {
-      color: var(--color-black);
+      color: var(--color-blue-zodiac);
       text-decoration: underline;
 
       transition: color 0.1s;
@@ -242,6 +280,44 @@
 
         transition: color 0.1s;
       }
+    }
+  }
+
+  &__info--mobile {
+    display: none;
+
+    margin: 0 0 20px 0;
+
+    & .feedback__info-text {
+      display: flex;
+      flex-direction: column;
+
+      &--big {
+        font-family: var(--font-family-title);
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 35px;
+        text-transform: uppercase;
+
+        margin: 0 0 16px 0;
+      }
+
+      &--small {
+        font-family: var(--font-family-title);
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: var(--color-gray);
+      }
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      display: block;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      display: block;
     }
   }
 }
