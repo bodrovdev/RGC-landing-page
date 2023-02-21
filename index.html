@@ -11,10 +11,12 @@
   <meta name="format-detection" content="email=no">
 
   <link href="css/style.min.css?v=1.0" rel="stylesheet">
+  <script src="https://unpkg.com/vanilla-counter"></script>
   <title></title>
 </head>
 
 <body>
+
   <header class="page-header">
     <nav class="main-nav">
       <div class="main-nav__nav-wrapper">
@@ -49,7 +51,7 @@
 
             <div class="main-nav__lang">
               <a class="main-nav__lang-item main-nav__lang-item--ru base-link" href="#">Ru</a>
-              <a class="main-nav__lang-item base-link" href="#">En</a>
+              <a class="main-nav__lang-item main-nav__lang-item--en base-link" href="#">En</a>
             </div>
 
           </div>
@@ -109,19 +111,20 @@
           </div>
           <div class="features__column-stats">
             <div class="features__stats-item">
-              <span class="features__stats-num">20%</span>
+              <span class="features__stats-num" data-vanilla-counter data-start-at="0" data-end-at="20" data-format="{}%" data-time="2000">{}</span>
               <span class="features__stats-desc">
                 годовой рост стоимости
                 недвижимости в Дубаи
               </span>
             </div>
             <div class="features__stats-item">
-              <span class="features__stats-num">10%</span>
+              <span class="features__stats-num" data-vanilla-counter data-start-at="0" data-end-at="10" data-format="{}%" data-time="2000">{}</span>
               <span class="features__stats-desc">
                 Составляет первый
                 взнос
               </span>
             </div>
+
           </div>
         </div>
       </div>
@@ -350,6 +353,7 @@
     </div>
     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A83e3ddc3eb72d51efcb3c7e4d8b8c180bbe7dc0f978a3cae4c52d18cb1c27b7f&amp;source=constructor" frameborder="0"></iframe>
   </section>
+
 
 </main>
 
