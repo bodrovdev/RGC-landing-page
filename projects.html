@@ -10,7 +10,7 @@
   <meta name="format-detection" content="address=no">
   <meta name="format-detection" content="email=no">
 
-  <link href="css/style.min.css?v=1.0" rel="stylesheet">
+  <link href="css/style.min.css?v=1.1" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet" />
   <script src="https://unpkg.com/vanilla-counter"></script>
   <title></title>
@@ -31,33 +31,33 @@
 
             <a class="main-nav__logo-link main-nav__logo-link--mobile base-link" href="index.html">
               <figure class="main-nav__logo-image base-figure">
-                <img class="main-nav__logo-img" src="img/image/logo-footer.svg" width="120" height="50" alt="Логотип">
+                <img class="main-nav__logo-img" src="img/image/logo.svg" width="120" height="50" alt="Логотип">
               </figure>
             </a>
 
             <ul class="main-nav__nav-list base-list">
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" style="color: var(--color-mine-shaft)" href="#features">Почему мы</a>
+                <a class="main-nav__nav-link main-nav__nav-link--projects base-link" href="#features">Почему мы</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" style="color: var(--color-mine-shaft)" href="projects.html">Проекты</a>
+                <a class="main-nav__nav-link main-nav__nav-link--projects base-link" href="projects.html">Проекты</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" style="color: var(--color-mine-shaft)" href="#about">О нас</a>
+                <a class="main-nav__nav-link main-nav__nav-link--projects base-link" href="#about">О нас</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" style="color: var(--color-mine-shaft)" href="#help">Консультация</a>
+                <a class="main-nav__nav-link main-nav__nav-link--projects base-link" href="#help">Консультация</a>
               </li>
             </ul>
 
             <div class="main-nav__lang">
               <a class="main-nav__lang-item main-nav__lang-item--ru base-link" href="#">Ru</a>
-              <a class="main-nav__lang-item main-nav__lang-item--en base-link" style="color: var(--color-mine-shaft)" href="#">En</a>
+              <a class="main-nav__lang-item main-nav__lang-item--en main-nav__lang-item--en--projects base-link" href="#">En</a>
             </div>
 
           </div>
           <button class="main-nav__burger base-button" id="burger">
-            <span class="main-nav__burger-line"></span>
+            <span class="main-nav__burger-line main-nav__burger-line--projects"></span>
           </button>
         </div>
       </div>
@@ -134,7 +134,7 @@
             import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
 
             const reports_swiper_1 = new Swiper('.projects__slider--1', {
-              spaceBetween: 25,
+              // spaceBetween: 25,
               slidesPerView: "auto",
               loop: true,
               speed: 700,
@@ -143,15 +143,6 @@
               //   nextEl: ".about-projectSlider__arrow--next",
               //   prevEl: ".about-projectSlider__arrow--prev",
               // },
-
-              // breakpoints: {
-              //   320: {
-              //     slidesPerView: 1,
-              //   },
-              //   1024: {
-              //     slidesPerView: "auto",
-              //   }
-              // }
             });
           </script>
 
