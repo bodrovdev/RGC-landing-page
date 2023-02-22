@@ -11,6 +11,7 @@
   <meta name="format-detection" content="email=no">
 
   <link href="css/style.min.css?v=1.0" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet" />
   <script src="https://unpkg.com/vanilla-counter"></script>
   <title></title>
 </head>
@@ -36,16 +37,16 @@
 
             <ul class="main-nav__nav-list base-list">
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="#test">Почему мы</a>
+                <a class="main-nav__nav-link base-link" href="#features">Почему мы</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="#">Услуги</a>
+                <a class="main-nav__nav-link base-link" href="projects.html">Услуги</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="#">О нас</a>
+                <a class="main-nav__nav-link base-link" href="#about">О нас</a>
               </li>
               <li class="main-nav__nav-item">
-                <a class="main-nav__nav-link base-link" href="#">Консультация</a>
+                <a class="main-nav__nav-link base-link" href="#help">Консультация</a>
               </li>
             </ul>
 
@@ -64,6 +65,7 @@
   </header>
 
 <main class="page-content">
+
   <section class="heading">
     <div class="heading__container base-container">
       <div class="heading__info">
@@ -79,7 +81,7 @@
             <span class="heading__features-text">Качественно</span>
           </div>
         </div>
-        <a class="heading__info-link base-link" href="#">ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ</a>
+        <a class="heading__info-link base-link" href="#feedback">ПОЛУЧИТЬ ПРЕДЛОЖЕНИЕ</a>
       </div>
     </div>
   </section>
@@ -87,7 +89,7 @@
   <section class="features">
     <div class="features__container base-container">
       <h2 class="features__title section-title base-title">Почему выбирают именно нас</h2>
-      <div class="features__wrapper">
+      <div class="features__wrapper" id="features">
         <div class="features__column features__column--left">
           <figure class="features__image base-figure">
             <img class="features__img" src="img/image/features-img.png" width="526" height="551" alt="#">
@@ -111,14 +113,14 @@
           </div>
           <div class="features__column-stats">
             <div class="features__stats-item">
-              <span class="features__stats-num" data-vanilla-counter data-start-at="0" data-end-at="20" data-format="{}%" data-time="2000">{}</span>
+              <span class="features__stats-num" data-vanilla-counter data-start-at="0" data-end-at="20" data-format="{}%" data-time="1000">{}</span>
               <span class="features__stats-desc">
                 годовой рост стоимости
                 недвижимости в Дубаи
               </span>
             </div>
             <div class="features__stats-item">
-              <span class="features__stats-num" data-vanilla-counter data-start-at="0" data-end-at="10" data-format="{}%" data-time="2000">{}</span>
+              <span class="features__stats-num" data-vanilla-counter data-start-at="0" data-end-at="10" data-format="{}%" data-time="1000">{}</span>
               <span class="features__stats-desc">
                 Составляет первый
                 взнос
@@ -133,7 +135,7 @@
 
   <section class="help">
     <div class="help__container base-container">
-      <h2 class="help__title section-title base-title">Мы оказываем консультативную помощь, а именно:</h2>
+      <h2 class="help__title section-title base-title" id="help">Мы оказываем консультативную помощь, а именно:</h2>
       <div class="help__wrapper">
         <div class="help__wrapper-main">
           <div class="help__wrapper-item">
@@ -218,14 +220,14 @@
           </div>
         </div>
 
-        <a class="help__wrapper-link base-link" href="#">Получить предложение</a>
+        <a class="help__wrapper-link base-link" href="#feedback">Получить предложение</a>
 
       </div>
-      <a class="help__wrapper-link help__wrapper-link--mobile base-link" href="#">Получить предложение</a>
+      <a class="help__wrapper-link help__wrapper-link--mobile base-link" href="#feedback">Получить предложение</a>
     </div>
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="about__container base-container">
       <h2 class="about__title about__title--mobileOnly section-title base-title">Мы профессионалы своего дела</h2>
       <figure class="about__image base-figure">
@@ -240,28 +242,57 @@
           </p>
         </div>
         <div class="about__features">
+
           <div class="about__features-item">
-            <div class="about__features-info">
-              <span class="about__features-num">14+</span>
-              <span class="about__features-desc">Лет на рынке. Работаем с 2008 года</span>
+            <div class="about__features-item about__features-item--front">
+              <div class="about__features-info">
+                <span>Тезис</span>
+              </div>
+            </div>
+            <div class="about__features-item about__features-item--back">
+              <div class="about__features-info">
+                <span class="about__features-num">14+</span>
+                <span class="about__features-desc">Лет на рынке. Работаем с 2008 года</span>
+              </div>
             </div>
           </div>
           <div class="about__features-item">
-            <div class="about__features-info">
-              <span class="about__features-num">2700+</span>
-              <span class="about__features-desc">Человек получили помощь</span>
+            <div class="about__features-item about__features-item--front">
+              <div class="about__features-info">
+                <span>Тезис 2</span>
+              </div>
+            </div>
+            <div class="about__features-item about__features-item--back">
+              <div class="about__features-info">
+                <span class="about__features-num">2700+</span>
+                <span class="about__features-desc">Человек получили помощь</span>
+              </div>
             </div>
           </div>
           <div class="about__features-item">
-            <div class="about__features-info">
-              <span class="about__features-num">80+</span>
-              <span class="about__features-desc">Специалистов отвечают на ваши вопросы</span>
+            <div class="about__features-item about__features-item--front">
+              <div class="about__features-info">
+                <span>Тезис 3</span>
+              </div>
+            </div>
+            <div class="about__features-item about__features-item--back">
+              <div class="about__features-info">
+                <span class="about__features-num">80+</span>
+                <span class="about__features-desc">Специалистов отвечают на ваши вопросы</span>
+              </div>
             </div>
           </div>
           <div class="about__features-item">
-            <div class="about__features-info">
-              <span class="about__features-num">94+</span>
-              <span class="about__features-desc">Успешно -завершенных проектов</span>
+            <div class="about__features-item about__features-item--front">
+              <div class="about__features-info">
+                <span>Тезис 4</span>
+              </div>
+            </div>
+            <div class="about__features-item about__features-item--back">
+              <div class="about__features-info">
+                <span class="about__features-num">94+</span>
+                <span class="about__features-desc">Успешно -завершенных проектов</span>
+              </div>
             </div>
           </div>
         </div>
@@ -269,7 +300,7 @@
     </div>
   </section>
 
-  <section class="feedback" id="test">
+  <section class="feedback" id="feedback">
     <div class="feedback__container base-container">
       <div class="feedback__wrapper">
         <div class="feedback__column feedback__column--left">
@@ -282,33 +313,31 @@
           <form class="feedback__form">
             <label class="feedback__label" for="form_name">
               <span class="feedback__label-text">Как к вам обращаться?</span>
-              <input class="feedback__input" type="text" name="form_name" id="form_name">
+              <input class="feedback__input" type="text" name="form_name" id="form_name" required>
             </label>
             <label class="feedback__label feedback__label--phone" for="form_phone">
               <span class="feedback__label-text">Ваш контактный номер телефона</span>
             </label>
-
             <div class="feedback__input-block">
-              <div class="feedback__select">
-                <svg class="feedback__select-flag" width="30" height="20">
-                  <use href="img/icon/sprite.svg#rus-icon"></use>
-                </svg>
+
+              <!-- select -->
+              <div class="feedback__select" id="select">
+                <div class="feedback__select-flag feedback__select-flag--ru" id="select_flag"></div>
                 <svg class="feedback__select-arrow" width="6" height="6">
                   <use href="img/icon/sprite.svg#check-arrow-icon"></use>
                 </svg>
                 <ul class="feedback__select-list base-list">
-                  <li class="feedback__select-item">
-
-                  </li>
-                  <li class="feedback__select-item">eng</li>
+                  <li class="feedback__select-item feedback__select-item--ru"></li>
+                  <li class="feedback__select-item feedback__select-item--ar"></li>
                 </ul>
               </div>
-              <input class="feedback__input feedback__input--mobile" type="text" name="form_phone" id="form_phone">
-            </div>
+              <!-- select -->
 
+              <input class="feedback__input feedback__input--mobile" type="text" name="form_phone" id="phone_input" required>
+            </div>
             <label class="feedback__label">
               <span class="feedback__label-text">Опишите вашу ситуацию</span>
-              <textarea class="feedback__textarea" name="form_text" id="form_text"></textarea>
+              <textarea class="feedback__textarea" name="form_text" id="form_text" required></textarea>
             </label>
 
             <button class="feedback__submit base-button" type="submit">Отправить</button>
@@ -369,16 +398,16 @@
       </a>
       <ul class="footer-main__nav-list base-list">
         <li class="footer-main__nav-item">
-          <a class="footer-main__nav-link base-link" href="#">Почему мы</a>
+          <a class="footer-main__nav-link base-link" href="#features">Почему мы</a>
         </li>
         <li class="footer-main__nav-item">
-          <a class="footer-main__nav-link base-link" href="#">Услуги</a>
+          <a class="footer-main__nav-link base-link" href="projects.html">Услуги</a>
         </li>
         <li class="footer-main__nav-item">
-          <a class="footer-main__nav-link base-link" href="#">О нас</a>
+          <a class="footer-main__nav-link base-link" href="#about">О нас</a>
         </li>
         <li class="footer-main__nav-item">
-          <a class="footer-main__nav-link base-link" href="#">Консультация</a>
+          <a class="footer-main__nav-link base-link" href="#help">Консультация</a>
         </li>
       </ul>
       <div class="footer-main__info">
@@ -395,6 +424,7 @@
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="js/index.min.js?v=1.0"></script>
 </body>
 
