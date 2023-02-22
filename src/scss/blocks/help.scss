@@ -125,6 +125,16 @@
 
     color: var(--color-black);
 
+    transition: box-shadow 0.3s, font-size 0.3s;
+
+    &:hover {
+      box-shadow: 0px 0px 10px rgba(207, 186, 130, 0.25), 0px 0px 10px rgba(207, 186, 130, 0.25), 0px 0px 10px rgba(207, 186, 130, 0.25), 0px 0px 10px rgba(207, 186, 130, 0.25), 0px 0px 10px rgba(216, 127, 127, 0.25), 0px 0px 10px rgba(216, 127, 127, 0.25);
+
+      font-size: 18px;
+
+      transition: box-shadow 0.3s, font-size 0.3s;
+    }
+
     @include mixins.respond-to(mobileOnly) {
       display: none;
     }

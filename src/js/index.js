@@ -53,7 +53,52 @@ whenInViewport(document.querySelector('.features__stats-num'), () => {
   VanillaCounter();
 });
 
-//Выпадающее меню с выбором категории на странице feedback
+//Выпадающее меню с выбором языка на странице feedback
+let select = document.getElementById('select');
+let select_flag = document.getElementById('select_flag');
+let select_menu = document.querySelector('.feedback__select-list');
+let select_item_ru = document.querySelector('.feedback__select-item--ru');
+let select_item_ar = document.querySelector('.feedback__select-item--ar');
+
+let phone_input = document.getElementById('phone_input');
+
+select.addEventListener('click', () => {
+  select_menu.classList.toggle('feedback__select-list--active');
+  console.log('test');
+})
+
+select_item_ru.addEventListener('click', () => {
+  if (select_flag.classList.contains('feedback__select-item--ru')) {
+    return;
+  }
+  else {
+    select_flag.classList.remove('feedback__select-item--ar');
+    select_flag.classList.add('feedback__select-item--ru');
+    phone_input.value = '';
+
+
+
+    console.log('поменял на русский');
+
+  }
+})
+
+select_item_ar.addEventListener('click', () => {
+  if (select_flag.classList.contains('feedback__select-item--ar')) {
+    return;
+  }
+  else {
+    select_flag.classList.remove('feedback__select-item--ru');
+    select_flag.classList.add('feedback__select-item--ar');
+    phone_input.value = '';
+
+
+
+    console.log('поменял на арабский');
+  }
+})
+
+
 
 //Плавный скроллинг до якорных ссылок
 $('a[href^="#"]').on('click', function (e) {

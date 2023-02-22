@@ -25,7 +25,14 @@
     align-items: center;
     justify-content: center;
 
+    &:hover .footer-main__logo-image {
+      transform: scale(1.1);
+      transition: transform 0.1s;
+    }
+
     &-image {
+      transition: transform 0.1s;
+
       margin: 0 0 7px 0
     }
 
@@ -98,6 +105,14 @@
     text-align: center;
     text-transform: uppercase;
 
+    transition: 0.1s color;
+
+    &:hover {
+      color: var(--color-equator);
+
+      transition: 0.1s color;
+    }
+
     @include mixins.respond-to(mobileOnly) {
       display: inline-block;
 
@@ -121,6 +136,9 @@
 
     &-isart {
 
+      display: flex;
+      align-items: center;
+
       font-family: var(--font-family-title);
       font-weight: 400;
       font-size: 13px;
@@ -128,6 +146,14 @@
       color: var(--color-mid-gray);
 
       margin: 0 0 12px 0;
+
+      &:hover .footer-main__isart-text {
+        color: var(--color-equator);
+      }
+
+      &:hover .footer-main__isart-icon {
+        filter: invert(83%) sepia(41%) saturate(599%) hue-rotate(344deg) brightness(91%) contrast(88%);
+      }
     }
 
     &-policy {
@@ -136,6 +162,14 @@
       font-size: 13px;
       line-height: 21px;
       color: var(--color-william);
+
+      &:hover {
+        color: var(--color-equator);
+      }
     }
+  }
+
+  &__isart-text {
+    margin: 0 13px 0 0
   }
 }

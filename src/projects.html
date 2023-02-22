@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="email=no">
+
+  <link href="css/style.min.css?v=1.0" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/vanilla-counter"></script>
+  <title></title>
+</head>
+
+<body>
+
+  <header class="page-header">
+    <nav class="main-nav">
+      <div class="main-nav__nav-wrapper">
+        <div class="main-nav__container base-container">
+          <a class="main-nav__logo-link base-link" href="index.html">
+            <figure class="main-nav__logo-image base-figure">
+              <img class="main-nav__logo-img" src="img/image/logo-footer.svg" width="120" height="50" alt="Логотип">
+            </figure>
+          </a>
+          <div class="main-nav__nav-menu main-nav__nav-menu--mobile" id="mobile_menu">
+
+            <a class="main-nav__logo-link main-nav__logo-link--mobile base-link" href="index.html">
+              <figure class="main-nav__logo-image base-figure">
+                <img class="main-nav__logo-img" src="img/image/logo-footer.svg" width="120" height="50" alt="Логотип">
+              </figure>
+            </a>
+
+            <ul class="main-nav__nav-list base-list">
+              <li class="main-nav__nav-item">
+                <a class="main-nav__nav-link base-link" style="color: var(--color-mine-shaft)" href="#features">Почему мы</a>
+              </li>
+              <li class="main-nav__nav-item">
+                <a class="main-nav__nav-link base-link" style="color: var(--color-mine-shaft)" href="projects.html">Услуги</a>
+              </li>
+              <li class="main-nav__nav-item">
+                <a class="main-nav__nav-link base-link" style="color: var(--color-mine-shaft)" href="#about">О нас</a>
+              </li>
+              <li class="main-nav__nav-item">
+                <a class="main-nav__nav-link base-link" style="color: var(--color-mine-shaft)" href="#help">Консультация</a>
+              </li>
+            </ul>
+
+            <div class="main-nav__lang">
+              <a class="main-nav__lang-item main-nav__lang-item--ru base-link" href="#">Ru</a>
+              <a class="main-nav__lang-item main-nav__lang-item--en base-link" style="color: var(--color-mine-shaft)" href="#">En</a>
+            </div>
+
+          </div>
+          <button class="main-nav__burger base-button" id="burger">
+            <span class="main-nav__burger-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-content">
+
+    <section class="projects">
+      <div class="projects__container">
+
+        <h2 class="projects__title section-title base-title">Наши проекты</h2>
+
+        <div class="projects__slider-block">
+          <div class="projects__desc-block">
+            <h2 class="projects__desc-title">Самый лучший проект</h2>
+            <div class="projects__desc-body">
+              <p>
+                Значимость этих проблем настолько очевидна,
+                что укрепление и развитие внутренней структуры
+                предполагает независимые способы реализации
+                инновационных методов управления процессами.
+                Имеется спорная точка зрения, гласящая примерно
+                следующее: действия представителей оппозиции
+                смешаны с не уникальными данными до степени
+                совершенной неузнаваемости
+              </p>
+            </div>
+          </div>
+
+          <div class="projects__slider--1 swiper">
+            <div class="projects__slider-wrapper swiper-wrapper">
+
+              <div class="projects__slide swiper-slide">
+                <div class="projects__slide-content">
+                  <figure class="projects__slide-image base-figure">
+                    <img class="projects__slide-img" src="img/image/project-slide-1.png">
+                  </figure>
+                  <div class="projects__slide-info">
+                    <span class="projects__info-text">Проект “Мечта богача” Постройка самого высокого торгового центра</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="projects__slide swiper-slide">
+                <div class="projects__slide-content">
+                  <figure class="projects__slide-image base-figure">
+                    <img class="projects__slide-img" src="img/image/project-slide-2.png">
+                  </figure>
+                  <div class="projects__slide-info">
+                    <span class="projects__info-text">Проект “Мечта богача” Постройка самого высокого торгового центра</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- <div class="projects__arrows arrows">
+            <div class="projects__arrow projects__arrow--prev arrows__arrow arrows__arrow--prev">
+              <svg class="arrow-icon" width="16" height="16" alt="#">
+                <use href="img/icon/sprite.svg#arrow-icon"></use>
+              </svg>
+            </div>
+            <div class="projects__arrow projects__arrow--next arrows__arrow arrows__arrow-next">
+              <svg class="arrow-icon" width="16" height="16" alt="#" style="transform: rotate(-180deg);">
+                <use href="img/icon/sprite.svg#arrow-icon"></use>
+              </svg>
+            </div>
+          </div> -->
+
+          </div>
+
+          <script type="module">
+            import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+            const reports_swiper_1 = new Swiper('.projects__slider--1', {
+              spaceBetween: 25,
+              slidesPerView: "auto",
+              loop: true,
+              speed: 700,
+
+              // navigation: {
+              //   nextEl: ".about-projectSlider__arrow--next",
+              //   prevEl: ".about-projectSlider__arrow--prev",
+              // },
+
+              // breakpoints: {
+              //   320: {
+              //     slidesPerView: 1,
+              //   },
+              //   1024: {
+              //     slidesPerView: "auto",
+              //   }
+              // }
+            });
+          </script>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="feedback" id="feedback">
+      <div class="feedback__container base-container">
+        <div class="feedback__wrapper">
+          <div class="feedback__column feedback__column--left">
+
+            <div class="feedback__info feedback__info--mobile">
+              <span class="feedback__info-text feedback__info-text--big">Отправьте заявку прямо сейчас!</span>
+              <span class="feedback__info-text feedback__info-text--small">И уже сегодня мы решим Ваш вопрос</span>
+            </div>
+
+            <form class="feedback__form">
+              <label class="feedback__label" for="form_name">
+                <span class="feedback__label-text">Как к вам обращаться?</span>
+                <input class="feedback__input" type="text" name="form_name" id="form_name" required>
+              </label>
+              <label class="feedback__label feedback__label--phone" for="form_phone">
+                <span class="feedback__label-text">Ваш контактный номер телефона</span>
+              </label>
+              <div class="feedback__input-block">
+
+                <!-- select -->
+                <div class="feedback__select" id="select">
+                  <div class="feedback__select-flag feedback__select-flag--ru" id="select_flag"></div>
+                  <svg class="feedback__select-arrow" width="6" height="6">
+                    <use href="img/icon/sprite.svg#check-arrow-icon"></use>
+                  </svg>
+                  <ul class="feedback__select-list base-list">
+                    <li class="feedback__select-item feedback__select-item--ru"></li>
+                    <li class="feedback__select-item feedback__select-item--ar"></li>
+                  </ul>
+                </div>
+                <!-- select -->
+
+                <input class="feedback__input feedback__input--mobile" type="text" name="form_phone" id="phone_input" required>
+              </div>
+              <label class="feedback__label">
+                <span class="feedback__label-text">Опишите вашу ситуацию</span>
+                <textarea class="feedback__textarea" name="form_text" id="form_text" required></textarea>
+              </label>
+
+              <button class="feedback__submit base-button" type="submit">Отправить</button>
+              <span class="feedback__terms">Нажимая кнопку вы даете <a class="feedback__terms-link base-link" href="#">согласие на обработку</a> персональных данных</span>
+            </form>
+          </div>
+          <div class="feedback__column feedback__column--right">
+            <div class="feedback__info">
+              <span class="feedback__info-text feedback__info-text--big">Отправьте заявку прямо сейчас!</span>
+              <span class="feedback__info-text feedback__info-text--small">И уже сегодня мы решим Ваш вопрос</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+
+      <div class="map__info">
+        <div class="map__info-top">
+          <a class="map__info-phone base-link" href="tel:#">7 (000) 000-00-00 (Москва)</a>
+          <a class="map__info-phone base-link" href="tel:#">+000-0-000-0000 (ОАЭ)</a>
+        </div>
+
+        <div class="map__info-bottom">
+          <div class="map__bottom-left">
+            А тут тоже будет продолжение адреса<br>
+            Тут должен быть адрес офиса
+          </div>
+          <div class="map__bottom-right">
+            <div class="map__bottom-links">
+              <a class="map__bottom-link base-link" href="#">
+                <img class="map__bottom-icon" src="img/image/social-1.png" width="31" height="31" alt="#">
+              </a>
+              <a class="map__bottom-link base-link" href="#">
+                <img class="map__bottom-icon" src="img/image/social-2.png" width="39" height="39" alt="#">
+              </a>
+            </div>
+            <a class="map__bottom-email base-link" href="mailto:#">babkahagivagi@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A83e3ddc3eb72d51efcb3c7e4d8b8c180bbe7dc0f978a3cae4c52d18cb1c27b7f&amp;source=constructor" frameborder="0"></iframe>
+    </section>
+
+
+  </main>
+
+  @@include('components/_base/_base-footer.html')
