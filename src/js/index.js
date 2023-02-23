@@ -1,5 +1,17 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
-import whenInViewport from 'when-in-viewport';
+import { CountUp } from 'countup.js';
+
+//Функция для проверки нахождения элемента во вьюпорте
+function isInViewport(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
 
 // --- Мобильное меню
 let burger = document.getElementById('burger');
@@ -22,14 +34,15 @@ burger.addEventListener('click', () => {
 // - Закрытие по клику на пункт меню
 nav_list.onclick = function (event) {
   let target = event.target;
+  console.log(target.tagName);
 
-  if (target.tagName != 'a') return;
-
-  burger.classList.toggle('main-nav__burger--active');
-  mobile_menu.classList.toggle('main-nav__nav-menu--mobile--active');
-
-  if (mobile_menu.classList.contains('main-nav__nav-menu--mobile--active')) {
+  if (target.tagName !== 'A') {
+    return;
+  }
+  else {
     enableBodyScroll(mobile_menu);
+    burger.classList.toggle('main-nav__burger--active');
+    mobile_menu.classList.toggle('main-nav__nav-menu--mobile--active');
   }
 };
 
@@ -37,23 +50,39 @@ nav_list.onclick = function (event) {
 window.addEventListener('load', () => {
   let allChecks = document.querySelectorAll('.help__graphic-icon');
 
-  function timeOutFunction(value, time) {
-    setTimeout(() => {
-      value.classList.add('check-icon');
-    }, time * 500)
+  if (allChecks === null) {
+    return;
   }
+  else {
+    function timeOutFunction(value, time) {
+      setTimeout(() => {
+        value.classList.add('check-icon');
+      }, time * 500)
+    }
 
-  whenInViewport(document.querySelector('.help__wrapper-item'), () => {
-    Array.from(allChecks).map((item, index) => timeOutFunction(item, index));
-  });
+    window.addEventListener('scroll', () => {
+      if (document.querySelector('.help__wrapper-item') === null) {
+        return;
+      }
+      else if (isInViewport(document.querySelector('.help__wrapper-item'))) {
+        Array.from(allChecks).map((item, index) => timeOutFunction(item, index));
+      }
+    })
+  }
 })
 
-// --- 
-whenInViewport(document.querySelector('.features__stats-num'), () => {
-  VanillaCounter();
-});
+// --- Анимация счётчика процентов
+window.addEventListener('load', () => {
+  if (document.getElementById('count_1') === null || document.getElementById('count_2') == null) {
+    return;
+  }
+  else {
+    const countUpOne = new CountUp(document.getElementById('count_1'), 20, { enableScrollSpy: true, scrollSpyOnce: true, useEasing: true, duration: 5, });
+    const countUpTwo = new CountUp(document.getElementById('count_2'), 10, { enableScrollSpy: true, scrollSpyOnce: true, useEasing: true, duration: 5, });
+  }
+})
 
-//Выпадающее меню с выбором языка на странице feedback
+//Выпадающее меню с выбором языка в блоке feedback
 let select = document.getElementById('select');
 let select_flag = document.getElementById('select_flag');
 let select_menu = document.querySelector('.feedback__select-list');
@@ -74,12 +103,8 @@ select_item_ru.addEventListener('click', () => {
   else {
     select_flag.classList.remove('feedback__select-item--ar');
     select_flag.classList.add('feedback__select-item--ru');
-    phone_input.value = '';
 
-
-
-    console.log('поменял на русский');
-
+    phone_input.value = '+7 ';
   }
 })
 
@@ -90,14 +115,36 @@ select_item_ar.addEventListener('click', () => {
   else {
     select_flag.classList.remove('feedback__select-item--ru');
     select_flag.classList.add('feedback__select-item--ar');
-    phone_input.value = '';
 
-
-
-    console.log('поменял на арабский');
+    phone_input.value = '+971 ';
   }
 })
 
+// Модальное окно с подтверждением
+let form = document.getElementById('form');
+let modal = document.getElementById('modal');
+let modal_close = document.getElementById('modal_close');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  modal.classList.add('modal--active');
+  disableBodyScroll(modal);
+})
+
+modal_close.addEventListener('click', () => {
+  modal.classList.remove('modal--active');
+  enableBodyScroll(modal);
+})
+
+modal.addEventListener('click', (e) => {
+  if (e.target !== e.currentTarget) {
+    return;
+  }
+  else {
+    modal.classList.remove('modal--active');
+    enableBodyScroll(modal);
+  }
+})
 
 
 //Плавный скроллинг до якорных ссылок

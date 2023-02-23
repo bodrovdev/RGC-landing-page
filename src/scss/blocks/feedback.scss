@@ -2,7 +2,8 @@
 
 .feedback {
 
-  margin: 112px 0 146px 0;
+  padding: 20px 0 0 0;
+  margin: 92px 0 146px 0;
 
   @include mixins.respond-to(mobileOnly) {
     background: var(--color-wild-sand);
@@ -104,6 +105,8 @@
       }
 
       & .feedback__info {
+
+
         padding: 0 22px 0 22px;
         margin: auto 0 115px 0;
 
@@ -240,6 +243,7 @@
       min-width: 30px;
       height: 20px;
       min-height: 20px;
+      cursor: pointer;
 
       margin: 0 5px 0 0;
 
@@ -276,7 +280,7 @@
       width: 71px;
       height: 99px;
       background-color: var(--color-mercury);
-      box-shadow: 1px 5px 10px 0 var(--color-mine-shaft);
+      box-shadow: 0 30px 30px 0 var(--color-mine-shaft);
 
       &--active {
         display: flex;

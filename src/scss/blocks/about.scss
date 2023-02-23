@@ -2,6 +2,12 @@
 
 .about {
 
+  padding: 117px 0 0 0;
+
+  @include mixins.respond-to(mobileOnly) {
+    padding: 60px 0 0 0;
+  }
+
   &__container {
     display: flex;
     align-items: stretch;

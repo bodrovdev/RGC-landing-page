@@ -1,8 +1,40 @@
 @@include('components/_base/_base-header.html')
 
+<div class="modal" id="modal">
+  <div class="modal__wrapper">
+    <button class="modal__close base-button" id="modal_close">
+      <svg class="modal__close-icon" width="32" height="32" alt="#">
+        <use href="img/icon/sprite.svg#modal-close-icon"></use>
+      </svg>
+    </button>
+    <div class="modal__inner">
+      <span class="modal__text">Ваша заявка отправлена</span>
+    </div>
+  </div>
+</div>
+
 <main class="page-content">
 
   <section class="heading">
+
+    <style>
+      .heading {
+        min-height: 710px;
+        background: url('../img/image/header-cover.png') var(--color-william);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      @media only screen and (min-device-width: 320px) and (max-device-width: 1023px) {
+        .heading {
+          min-height: 679px;
+          background: url('../img/image/header-cover-mobile.png') var(--color-william);
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+      }
+    </style>
+
     <div class="heading__container base-container">
       <div class="heading__info">
         <h1 class="heading__info-title base-title">Услуги консалтинга</h1>
@@ -23,9 +55,9 @@
   </section>
 
   <section class="features">
-    <div class="features__container base-container">
+    <div class="features__container base-container" id="features">
       <h2 class="features__title section-title base-title">Почему выбирают именно нас</h2>
-      <div class="features__wrapper" id="features">
+      <div class="features__wrapper">
         <div class="features__column features__column--left">
           <figure class="features__image base-figure">
             <img class="features__img" src="img/image/features-img.png" width="526" height="551" alt="#">
@@ -49,14 +81,14 @@
           </div>
           <div class="features__column-stats">
             <div class="features__stats-item">
-              <span class="features__stats-num" data-vanilla-counter data-start-at="0" data-end-at="20" data-format="{}%" data-time="1000">{}</span>
+              <span class="features__stats-num"><span id="count_1"></span>%</span>
               <span class="features__stats-desc">
                 годовой рост стоимости
                 недвижимости в Дубаи
               </span>
             </div>
             <div class="features__stats-item">
-              <span class="features__stats-num" data-vanilla-counter data-start-at="0" data-end-at="10" data-format="{}%" data-time="1000">{}</span>
+              <span class="features__stats-num"><span id="count_2"></span>%</span>
               <span class="features__stats-desc">
                 Составляет первый
                 взнос
@@ -246,7 +278,7 @@
             <span class="feedback__info-text feedback__info-text--small">И уже сегодня мы решим Ваш вопрос</span>
           </div>
 
-          <form class="feedback__form">
+          <form class="feedback__form" id="form" name="form">
             <label class="feedback__label" for="form_name">
               <span class="feedback__label-text">Как к вам обращаться?</span>
               <input class="feedback__input" type="text" name="form_name" id="form_name" required>
@@ -269,7 +301,10 @@
               </div>
               <!-- select -->
 
-              <input class="feedback__input feedback__input--mobile" type="text" name="form_phone" id="phone_input" required>
+              <input class="feedback__input feedback__input--mobile" value="+7 " type="text" name="form_phone" id="phone_input" required>
+
+              <!-- <input class="feedback__input feedback__input--ru feedback__input--visible feedback__input--mobile" type="text" name="phone_input_ru" id="phone_input_ru">
+              <input class="feedback__input feedback__input--ar feedback__input--hidden feedback__input--mobile" type="text" name="phone_input_ar" id="phone_input_ar"> -->
             </div>
             <label class="feedback__label">
               <span class="feedback__label-text">Опишите вашу ситуацию</span>
