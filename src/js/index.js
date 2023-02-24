@@ -77,8 +77,10 @@ window.addEventListener('load', () => {
     return;
   }
   else {
-    const countUpOne = new CountUp(document.getElementById('count_1'), 20, { enableScrollSpy: true, scrollSpyOnce: true, useEasing: true, duration: 5, });
-    const countUpTwo = new CountUp(document.getElementById('count_2'), 10, { enableScrollSpy: true, scrollSpyOnce: true, useEasing: true, duration: 5, });
+    let count_1_num = document.getElementById('count_1_num');
+    let count_2_num = document.getElementById('count_2_num');
+    const countUpOne = new CountUp(document.getElementById('count_1'), count_1_num.textContent, { enableScrollSpy: true, scrollSpyOnce: true, useEasing: true, duration: 5, });
+    const countUpTwo = new CountUp(document.getElementById('count_2'), count_2_num.textContent, { enableScrollSpy: true, scrollSpyOnce: true, useEasing: true, duration: 5, });
   }
 })
 
