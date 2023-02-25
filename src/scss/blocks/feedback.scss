@@ -78,9 +78,6 @@
       flex-direction: column;
 
       border-radius: 6px;
-      background: url(../img/image/feedback-cover.png);
-      background-size: cover;
-      background-repeat: no-repeat;
 
       @include mixins.respond-to(mobileOnly) {
         display: none;
