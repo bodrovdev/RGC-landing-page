@@ -95,7 +95,6 @@ let phone_input = document.getElementById('phone_input');
 
 select.addEventListener('click', () => {
   select_menu.classList.toggle('feedback__select-list--active');
-  console.log('test');
 })
 
 select_item_ru.addEventListener('click', () => {
@@ -107,6 +106,7 @@ select_item_ru.addEventListener('click', () => {
     select_flag.classList.add('feedback__select-item--ru');
 
     phone_input.value = '+7 ';
+    phone_input.focus();
   }
 })
 
@@ -119,8 +119,11 @@ select_item_ar.addEventListener('click', () => {
     select_flag.classList.add('feedback__select-item--ar');
 
     phone_input.value = '+971 ';
+    phone_input.focus();
   }
 })
+
+
 
 // Модальное окно с подтверждением
 let form = document.getElementById('form');
